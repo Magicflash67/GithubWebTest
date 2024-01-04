@@ -1,0 +1,179 @@
+ <!DOCTYPE html>
+<html>
+<body>
+  <head>
+     <title>Number Manipulation Form</title>
+  <script>
+     function increaseNumberHigh() {
+      var inputField = document.getElementById('highAuto');
+      var currentValue = parseInt(inputField.value);
+      inputField.value = currentValue + 1;
+    }
+
+    function decreaseNumberHigh() {
+      var inputField = document.getElementById('highAuto');
+      var currentValue = parseInt(inputField.value);
+      if (currentValue > 0) {
+        inputField.value = currentValue - 1;
+      }
+    }
+
+    function increaseNumberMid() {
+      var inputField = document.getElementById('midAuto');
+      var currentValue = parseInt(inputField.value);
+      inputField.value = currentValue + 1;
+    }
+
+    function decreaseNumberMid() {
+      var inputField = document.getElementById('midAuto');
+      var currentValue = parseInt(inputField.value);
+      if (currentValue > 0) {
+        inputField.value = currentValue - 1;
+      }
+    }
+
+    function increaseNumberLow() {
+      var inputField = document.getElementById('lowAuto');
+      var currentValue = parseInt(inputField.value);
+      inputField.value = currentValue + 1;
+    }
+
+    function decreaseNumberLow() {
+      var inputField = document.getElementById('lowAuto');
+      var currentValue = parseInt(inputField.value);
+      if (currentValue > 0) {
+        inputField.value = currentValue - 1;
+      }
+    }
+    function increaseNumberHighTeleop() {
+      var inputField = document.getElementById('highTeleop');
+      var currentValue = parseInt(inputField.value);
+      inputField.value = currentValue + 1;
+    }
+
+    function decreaseNumberHighTeleop() {
+      var inputField = document.getElementById('highTeleop');
+      var currentValue = parseInt(inputField.value);
+      if (currentValue > 0) {
+        inputField.value = currentValue - 1;
+      }
+    }
+
+    function increaseNumberMidTeleop() {
+      var inputField = document.getElementById('midTeleop');
+      var currentValue = parseInt(inputField.value);
+      inputField.value = currentValue + 1;
+    }
+
+    function decreaseNumberMidTeleop() {
+      var inputField = document.getElementById('midTeleop');
+      var currentValue = parseInt(inputField.value);
+      if (currentValue > 0) {
+        inputField.value = currentValue - 1;
+      }
+    }
+
+    function increaseNumberLowTeleop() {
+      var inputField = document.getElementById('lowTeleop');
+      var currentValue = parseInt(inputField.value);
+      inputField.value = currentValue + 1;
+    }
+
+    function decreaseNumberLowTeleop() {
+      var inputField = document.getElementById('lowTeleop');
+      var currentValue = parseInt(inputField.value);
+      if (currentValue > 0) {
+        inputField.value = currentValue - 1;
+      }
+    }
+  </script>
+  <head>
+<h2>Match And Scout Info</h2>
+<form >
+  <label for="fname">Color:</label><br>
+  <input type="text" id="color" name="color" value="Blue" readonly><br>
+  <label for="MatchNumber">Match Number:</label><br>
+  <input type="text" id="MatchNumber" name="matchNumber" pattern="[0-9]+" title="Enter the Team number"><br>
+  <label for="lname">Team Number:</label><br>
+  <input type="text" id="TeamNumber" name="TeamNumber" pattern="[0-9]+" title="Enter the Team number"><br>
+  <label for="lname">Scouter Name:</label><br>
+  <input type="text" id="ScouterName" name="ScouterName"><br><br>
+  <h2>Autonomous</h2>
+
+ <label for="lname">Team Number:</label><br>
+  <p>Items scored on the <strong>Lower</strong> level in Autonomous</p>
+  <button type="button" onclick="decreaseNumberLow()">Decrease</button>
+  <input name="lowAuto" type="text" id="lowAuto" value="0">
+  <button type="button" onclick="increaseNumberLow()">Increase</button><br><br>
+  
+  <p>Items scored on the <strong>Middle</strong> level in Autonomous</p>
+  <button type="button" onclick="decreaseNumberMid()">Decrease</button>
+  <input name="midAuto" type="text" id="midAuto" value="0">
+  <button type="button" onclick="increaseNumberMid()">Increase</button><br><br>
+  
+  <p>Items scored on the <strong>High</strong> level in Autonomous</p>
+  <button type="button" onclick="decreaseNumberHigh()">Decrease</button>
+  <input name="highAuto" type="text" id="highAuto" value="0">
+  <button type="button" onclick="increaseNumberHigh()">Increase</button><br><br>
+
+<input type="radio" id="notDocked" name="notDocking" value="Not Docked">
+<label for="notDocked">Not Docked</label><br>
+<input type="radio" id="DockNoEnga" name="DockingNoEnga" value="Docked Not engaged">
+<label for="dockNoEnga">Docked Not engaged</label><br>
+<input type="radio" id="dockAndEnga" name="Docking" value="Docked and Engaged">
+<label for="dockAndEngat">Docked and Engaged</label><br><br>
+<h2>Teleoprated</h2>
+
+<p>Items scored on the <strong>Lower</strong> level in Teleoprated</p>
+  <button type="button" onclick="decreaseNumberLowTeleop()">Decrease</button>
+  <input name="lowTeleop" type="text" id="lowTeleop" value="0">
+  <button type="button" onclick="increaseNumberLowTeleop()">Increase</button><br><br>
+  
+  <p>Items scored on the <strong>Middle</strong> level in Teleoprated</p>
+  <button type="button" onclick="decreaseNumberMidTeleop()">Decrease</button>
+  <input name="midTeleop" type="text" id="midTeleop" value="0">
+  <button type="button" onclick="increaseNumberMidTeleop()">Increase</button><br><br>
+  
+  <p>Items scored on the <strong>High</strong> level in Teleoprated</p>
+  <button type="button" onclick="decreaseNumberHighTeleop()">Decrease</button>
+  <input name="highTeleop" type="text" id="highTeleop" value="0">
+  <button type="button" onclick="increaseNumberHighTeleop()">Increase</button><br><br>
+
+
+
+
+<input type="checkbox" id="myCheckbox" name="ScoredCones" value="isChecked">
+<label for="myCheckbox">Scored Cones</label><br><br>
+
+<input type="checkbox" id="myCheckbox" name="CubeScore" value="isChecked">
+<label for="myCheckbox">Scored Cubes</label><br><br>
+
+
+<input type="checkbox" id="myCheckbox" name="floorPickup" value="isChecked">
+<label for="myCheckbox">Floor pickup</label><br><br>
+
+
+<input type="checkbox" id="myCheckbox" name="pickupFromShelf" value="isChecked">
+<label for="myCheckbox">Pickup from shelf</label><br><br>
+
+<input type="checkbox" id="myCheckbox" name="sidefeederStation" value="isChecked">
+<label for="myCheckbox">Pickup from Side Feeder Station</label><br><br>
+
+<p>The Robot is ...</p>
+<input type="radio" id="notDocked" name="notDockingTeleop" value="Not Docked">
+<label for="notDockedTeleop">Not Docked</label><br>
+
+<input type="radio" id="DockNoEnga" name="DockingNoEngaTeleop" value="Docked Not engaged">
+<label for="dockNoEngaTeleop">Docked Not engaged</label><br>
+
+<input type="radio" id="dockAndEnga" name="DockingTeleop" value="Docked and Engaged">
+<label for="dockAndEngatTeleop">Docked and Engaged</label><br><br>
+
+
+  <input type="submit" value="Submit">
+</form> 
+
+
+</body>
+</html>
+
