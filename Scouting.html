@@ -87,28 +87,7 @@
       }
     }
   </script>
-   <script>
-   const form = document.querySelector("#form")
-   const submitButton = document.querySelector("#submit")
-   const scriptURL = 'https://script.google.com/a/macros/stu.waukesha.k12.wi.us/s/AKfycbzENUHz-W8aPz123R-jO5RH1eQVi471Fft4pRNgBuBJS7U-hjjGZ4YR5CgZMvtlLiMcaw/exec'
-
-   form.addEventListener('submit', e => {
-     submitButton.disabled = true
-     e.preventDefault()
-     let requestBody = new FormData(form)
-     fetch(scriptURL, { method: 'POST', body: requestBody})
-       .then(response => {
-          alert('Success!', response)
-          submitButton.disabled = false
-         })
-       .catch(error => {
-       alert('Error!', error.message)
-         submitButton.disabled = false
-
-       }
-       )
-   })
-</script>
+  
   <head>
 <h2>Match And Scout Info</h2>
 <form >
@@ -138,12 +117,13 @@
   <input name="highAuto" type="text" id="highAuto" value="0">
   <button type="button" onclick="increaseNumberHigh()">Increase</button><br><br>
 
-<input type="radio" id="notDocked" name="notDocking" value="Not Docked">
+<input type="radio" id="notDocked" name="dockingAuto" value="Not Docked">
 <label for="notDocked">Not Docked</label><br>
-<input type="radio" id="DockNoEnga" name="DockingNoEnga" value="Docked Not engaged">
+<input type="radio" id="dockNoEnga" name="dockingAuto" value="Docked Not engaged">
 <label for="dockNoEnga">Docked Not engaged</label><br>
-<input type="radio" id="dockAndEnga" name="Docking" value="Docked and Engaged">
-<label for="dockAndEngat">Docked and Engaged</label><br><br>
+<input type="radio" id="dockAndEnga" name="dockingAuto" value="Docked and Engaged">
+<label for="dockAndEnga">Docked and Engaged</label><br><br>
+ 
 <h2>Teleoprated</h2>
 
 <p>Items scored on the <strong>Lower</strong> level in Teleoprated</p>
@@ -191,9 +171,49 @@
 <input type="radio" id="dockAndEnga" name="DockingTeleop" value="Docked and Engaged">
 <label for="dockAndEngatTeleop">Docked and Engaged</label><br><br>
 
-   <label for="lname">any comments (rember Gracious professionalism):</label><br>
+   <label for="Commnets">any comments (rember Gracious professionalism):</label><br>
   <input type="text" id="comments" name="Comments"><br><br>
+<script>
 
+var elementArray = [];
+
+
+var element1 = "color"; 
+var element2 = "matchNumber"; 
+var element3 = "TeamNumber"; 
+var element4 = "ScouterName";
+var element5 = "lowAuto";
+var element6 = "midAuto";
+var element7 = "highAuto";
+var element8 = "dockingAuto";
+var element9 = "lowTeleop";
+var element10 = "midTeleop";
+var element11 = "highTeleop";
+var element12 = "ScoredCones";
+var element13 = "CubeScore";
+var element14 = "floorPickup";
+var element15 = "pickupFromShelf";
+var element16 = "notDockingTeleop";
+var element17 = "DockingNoEngaTeleop";
+var element18 = "DockingTeleop";
+var element19 = "Comments";
+
+
+elementArray.push(element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11, element12, element13, element14, element15, element16, element17, element18, element19);
+var elementArray = [element1, element2, element3, element4, element5, element6, element7, element8, element9, element10, element11, element12, element13, element14, element15, element16, element17, element18, element19];
+
+// Create an unordered list (ul) element
+var ul = document.createElement('ul');
+
+// Loop through the array and create list items (li) for each element
+elementArray.forEach(function(element) {
+  var li = document.createElement('li');
+  li.appendChild(document.createTextNode(element));
+  ul.appendChild(li);
+});
+ document.body.appendChild(ul);
+</script>
+ 
   <input type="submit" value="Submit">
 </form> 
 
